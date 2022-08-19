@@ -11,17 +11,21 @@ export default function Review() {
       setReviews(results);
     });
   }, [filmId]);
-  if (!reviews.length) {
-    return;
-  }
+
   return (
-    <Box as="ul">
-      {reviews.map(({ id, author, content }) => (
-        <li key={id}>
-          <h2>Author: {author}</h2>
-          <p>{content}</p>
-        </li>
-      ))}
-    </Box>
+    <>
+      {reviews.length ? (
+        <Box as="ul">
+          {reviews.map(({ id, author, content }) => (
+            <li key={id}>
+              <h2>Author: {author}</h2>
+              <p>{content}</p>
+            </li>
+          ))}
+        </Box>
+      ) : (
+        <h1>There is no reviews</h1>
+      )}
+    </>
   );
 }
