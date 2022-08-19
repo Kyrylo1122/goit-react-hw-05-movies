@@ -1,9 +1,11 @@
 import { Box } from 'components/Box';
 import { getTrending } from 'components/API/Api';
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useParams } from 'react-router-dom';
 
 export default function Home() {
+  const { pathname } = useLocation();
+
   const [trending, setTrending] = useState([]);
   useEffect(() => {
     try {
@@ -12,7 +14,7 @@ export default function Home() {
       console.log(error);
     }
   }, []);
-  if (!trending) {
+  if (!trending || pathname !== '/') {
     return;
   }
   return (

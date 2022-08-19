@@ -14,6 +14,7 @@ export const App = () => {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
+          {/* <Route path="/" element={<Home />}></Route> */}
           <Route path="Movies/:filmId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="review" element={<Review />} />
