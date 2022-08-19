@@ -1,7 +1,7 @@
 import { Box } from 'components/Box';
 import { getTrending } from 'components/API/Api';
 import { useEffect, useState } from 'react';
-import { NavLink, useLocation, useParams } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 export default function Home() {
   const { pathname } = useLocation();

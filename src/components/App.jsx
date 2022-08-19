@@ -1,4 +1,3 @@
-import Home from './Pages/Home';
 import Layout from './Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyle/GlobalStyle';
@@ -14,7 +13,6 @@ export const App = () => {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
-          {/* <Route path="/" element={<Home />}></Route> */}
           <Route path="Movies/:filmId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="review" element={<Review />} />
