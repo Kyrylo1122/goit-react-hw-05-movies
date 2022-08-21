@@ -6,6 +6,8 @@ export const NavItem = styled.li`
   }
 `;
 export const HeaderLink = styled(NavLink)`
+  padding: 10px;
+  border-radius: 4px;
   &.active {
     background-color: orange;
     color: white;

@@ -14,11 +14,17 @@ export default function Cast() {
     return;
   }
   return (
-    <Box as="ul">
+    <Box as="ul" display="flex" flexWrap="wrap" margin="-10px" p={4}>
       {cast.map(actor => {
         const { name, profile_path, character, id } = actor;
         return (
-          <li key={id}>
+          <Box
+            key={id}
+            width="150px"
+            borderRadius="4px"
+            margin="10px"
+            boxShadow="0px 0px 50px -28px rgba(66, 68, 90, 1)"
+          >
             <img
               src={
                 profile_path
@@ -30,7 +36,7 @@ export default function Cast() {
             />
             <p>{name}</p>
             <p>Character: {character}</p>
-          </li>
+          </Box>
         );
       })}
     </Box>

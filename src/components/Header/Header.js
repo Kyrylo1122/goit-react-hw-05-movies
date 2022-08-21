@@ -3,7 +3,7 @@ import { HeaderLink, NavItem } from './Header.style';
 
 export default function Header() {
   return (
-    <Box as="header" border="normal">
+    <Box as="header">
       <Box as="nav">
         <Box as="ul" display="flex">
           <NavItem>

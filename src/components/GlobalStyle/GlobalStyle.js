@@ -6,9 +6,8 @@ body{
     h3,
     h4,
     h5,h6,p{
-        margin: 0;
-        padding: 0;
-        font-family: monospace sans-serif;
+      
+        font-family: sans-serif;
     }
     li{
         list-style: none;

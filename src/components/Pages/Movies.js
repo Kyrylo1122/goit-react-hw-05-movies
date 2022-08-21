@@ -9,7 +9,6 @@ export default function Movies() {
   const location = useLocation();
 
   const filterParam = searchParam.get('filter') ?? '';
-  console.log('filterParam', filterParam);
   useEffect(() => {
     if (filterParam === '') {
       return;
